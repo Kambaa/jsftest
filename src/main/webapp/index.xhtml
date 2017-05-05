@@ -7,5 +7,7 @@
 <f:view>
     <h:outputLabel value="Hello, world" style="display: block;"/>
     <h:link value="Go To A Page With Information Gathered From Backing Bean" outcome="testPage.xhtml"/>
+    <br/>
+    <h:outputText value="#{testBean.testEJBBean.test}"/>
 </f:view>
 </html>

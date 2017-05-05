@@ -3,6 +3,7 @@ package tr.com.yusufgunduz.jsftest;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import javax.inject.Inject;
 import java.io.Serializable;
 
 /**
@@ -12,8 +13,12 @@ import java.io.Serializable;
 @ViewScoped
 public class TestBean implements Serializable {
 
+
     private String name;
     private Integer age;
+
+    @Inject
+    private TestEJBBean testEJBBean;
 
     private Boolean formEditEnabled;
 
@@ -50,5 +55,9 @@ public class TestBean implements Serializable {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public TestEJBBean getTestEJBBean() {
+        return testEJBBean;
     }
 }

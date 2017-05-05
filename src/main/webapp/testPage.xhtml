@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xml:lang="en" lang="en">
+<head>
+    <title>Test Page</title>
+</head>
+<body>
+<h:form>
+    <h:panelGrid columns="2" layout="block">
+        <h:outputLabel for="name" value="Name:"/>
+        <h:inputText id="name" value="#{testBean.name}" disabled="#{!testBean.formEditEnabled}"/>
+        <h:outputLabel for="age" value="Age:"/>
+        <h:inputText id="age" value="#{testBean.age}" disabled="#{!testBean.formEditEnabled}"/>
+
+        <h:outputLabel/>
+        <h:commandButton id="editEnableButton" value="Düzenle" actionListener="#{testBean.enableFormEditing()}"
+                         rendered="#{!testBean.formEditEnabled}"/>
+        <h:commandButton id="saveButton" value="Kaydet" actionListener="#{testBean.saveData()}"
+                         rendered="#{testBean.formEditEnabled}"/>
+    </h:panelGrid>
+    <br/>
+</h:form>
+</body>
+</html>

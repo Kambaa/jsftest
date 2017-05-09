@@ -7,6 +7,7 @@ import javax.faces.bean.ViewScoped;
 import javax.inject.Named;
 import java.io.Serializable;
 
+
 /**
  * Created by Kambaa on 5/5/17.
  */
